@@ -1,0 +1,285 @@
+{
+	"info": {
+		"name": "Tweeter",
+		"_postman_id": "9a482d4e-90f9-2d0e-1ac9-3dc8739bf330",
+		"description": "tweeter like blog site sample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n  \"user_email\":\"sashi@gmail.com\",\n  \"user_password\":\"123123\"\n}"
+				},
+				"url": {
+					"raw": "{{url_tweeter}}login.php",
+					"host": [
+						"{{url_tweeter}}login",
+						"php"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"user_name\":\"amitmali\",\n\t\"user_email\":\"amitmali@gmail.com\",\n\t\"user_password\":\"123123\",\n\t\"name\":\"Amit kumar\",\n\t\"user_city\":\"Sadri\"\n}"
+				},
+				"url": {
+					"raw": "{{url_tweeter}}signup.php",
+					"host": [
+						"{{url_tweeter}}signup",
+						"php"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "tweet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n  \"session_id\":\"S3zZwGiUHRyvlmXI9WhbLQTTg019z0Zs569NnhskwDD29syoUh\",\n  \"post_type\"  : 1,\n  \"post_text\"  :\"i am very happy to join tweeter.\",\n  \"img_id\": 0\n   \n}"
+				},
+				"url": {
+					"raw": "{{url_tweeter}}tweet.php",
+					"host": [
+						"{{url_tweeter}}tweet",
+						"php"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "tweets",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n  \"session_id\":\"S3zZwGiUHRyvlmXI9WhbLQTTg019z0Zs569NnhskwDD29syoUh\"\n}"
+				},
+				"url": {
+					"raw": "{{url_tweeter}}tweets.php",
+					"host": [
+						"{{url_tweeter}}tweets",
+						"php"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "like",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n  \"session_id\":\"q7UwsIJ8kBHuAU3kWh5xXz0twfvZjh7JLunK2lUM8TyqVJFAWM\",\n  \"post_id\"  : 8\n}"
+				},
+				"url": {
+					"raw": "{{url_tweeter}}like.php",
+					"host": [
+						"{{url_tweeter}}like",
+						"php"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n  \"session_id\":\"AZ2vvBKMIfvV31H3mQDi6GHMUCB090Wcm6KpeKs945oDKGzRlK\",\n  \"search\"  : \"a\"\n}"
+				},
+				"url": {
+					"raw": "{{url_tweeter}}search.php",
+					"host": [
+						"{{url_tweeter}}search",
+						"php"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "updates",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n  \"session_id\":\"S3zZwGiUHRyvlmXI9WhbLQTTg019z0Zs569NnhskwDD29syoUh\",\n  \"max_tweet_id\"  : 19\n}"
+				},
+				"url": {
+					"raw": "{{url_tweeter}}updates.php",
+					"host": [
+						"{{url_tweeter}}updates",
+						"php"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "follow",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n  \"session_id\":\"q7UwsIJ8kBHuAU3kWh5xXz0twfvZjh7JLunK2lUM8TyqVJFAWM\",\n  \"id_type\": 1,\n  \"user_id\"  : \"amitkmali\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}follow.php",
+					"host": [
+						"{{url}}follow",
+						"php"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n  \"session_id\":\"q7UwsIJ8kBHuAU3kWh5xXz0twfvZjh7JLunK2lUM8TyqVJFAWM\",\n  \"post_id\"  : 8,\n  \"comment\":\"yes you are right\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}comment.php",
+					"host": [
+						"{{url}}comment",
+						"php"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "comments",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n  \"session_id\":\"xfBSIQQ7ffdWvjKHiSFpFuiJIgCZqaxuXGpvFqrYtik2N3mIEi\",\n  \"post_id\"  : 8\n}"
+				},
+				"url": {
+					"raw": "{{url_tweeter}}comments.php",
+					"host": [
+						"{{url_tweeter}}comments",
+						"php"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "delete comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n  \"session_id\":\"q7UwsIJ8kBHuAU3kWh5xXz0twfvZjh7JLunK2lUM8TyqVJFAWM\",\n  \"comment_id\"  : 1\n}"
+				},
+				"url": {
+					"raw": "{{url}}delete_comment.php",
+					"host": [
+						"{{url}}delete_comment",
+						"php"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		}
+	]
+}
